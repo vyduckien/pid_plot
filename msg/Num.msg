@@ -1,0 +1,3 @@
+int32 output_rpm
+int32 output_controller
+int32 input_setpoint
