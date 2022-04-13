@@ -56,18 +56,18 @@ int main(int argc, char **argv)
    * a unique string for each message.
    */
   int32_t count = 0;
+  pid_plot::Num msg;
   while (ros::ok())
   {
     /**
      * This is a message object. You stuff it with data, and then publish it.
      */
-    pid_plot::Num msg;
 
     //std::stringstream ss;
     //ss << "hello world " << count;
     //msg.data = ss.str();
     msg.output_rpm = count;
-	ROS_INFO("Test setpoint: %d", msg.input_setpoint);	
+    ROS_INFO("Test setpoint: %d", msg.input_setpoint);	
     ROS_INFO("Test controller output: %d", msg.output_controller);
     ROS_INFO("Test actual RPM: %d", msg.output_rpm);
 
